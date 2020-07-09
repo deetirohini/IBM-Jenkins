@@ -1,0 +1,7 @@
+sudo usermod -1 -G docker
+sudo service docker start
+FROM ubuntu
+Maintainer deetirohini<rohini.deeti@gmail.com>
+RUN apt-get update
+RUN docker build -t dockerimage:1.0 .
+CMD ["echo" , "My Docker Image"]
